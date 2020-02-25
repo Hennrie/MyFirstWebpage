@@ -1,0 +1,316 @@
+/* ### GENERAL STYLING ###################################################### */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+
+  width: 100%;
+  height: 100vh;
+  font-family: "Allerta", sans-serif;
+}
+
+main {
+  margin: auto;
+  margin-top: 5%;
+  width: 85%;
+}
+
+h1 {
+  font-family: "Allerta Stencil";
+  font-size: 104px;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 4rem;
+
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+.mainHr {
+  width: 85%;
+  margin: auto;
+  border-color: #f5429b;
+}
+
+.headingHr {
+  width: 46.5%;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ### nav-bar styling ################################################################# */
+
+nav {
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav a {
+  line-height: 40px;
+}
+
+nav li:hover {
+  border-bottom: 2px solid #f5429b;
+}
+
+nav ul {
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ##################### 
+  ######################
+  ######################
+
+  HOME PAGE STYLING
+
+  ##################### 
+  ######################
+  ###################### */
+
+.animationText {
+  animation: fill 1s ease forwards 4s;
+}
+
+button {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 180px;
+  min-height: 60px;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #f5429b;
+  background: none;
+  color: white;
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+.animationText path:nth-child(n) {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: line-anim 7s ease forwards;
+}
+
+/* ### TAG STYLING ######################################################### */
+
+.musicTag {
+  transform: translateX(-105px);
+}
+
+.musicTag::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  height: 0;
+  width: 400px;
+  transition: all 1s;
+  transform: translateX(-67.5%);
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 43, 64, 1) 0%,
+    rgba(99, 51, 94, 1) 49%,
+    rgba(245, 66, 155, 1) 100%
+  );
+}
+
+.musicTag:hover::after {
+  height: 35px;
+  opacity: 1;
+}
+
+.mindTag {
+  transform: translateX(128px);
+}
+
+.mindTag::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  height: 0px;
+  width: 350px;
+  transition: all 1s;
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 43, 64, 1) 0%,
+    rgba(99, 51, 94, 1) 49%,
+    rgba(245, 66, 155, 1) 100%
+  );
+}
+
+.mindTag:hover::after {
+  height: 35px;
+  opacity: 1;
+}
+
+.artTag {
+  transform: translateX(-43px);
+}
+
+.artTag::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  height: 0;
+  width: 260px;
+  transition: all 1s;
+  transform: translateX(-57%);
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 43, 64, 1) 0%,
+    rgba(99, 51, 94, 1) 49%,
+    rgba(245, 66, 155, 1) 100%
+  );
+}
+
+.artTag:hover::after {
+  height: 35px;
+  opacity: 1;
+}
+
+.svgDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgDiv > span {
+  padding: 42px;
+}
+
+/* ##################### 
+  ######################
+  ######################
+
+  MIND PAGE STYLING
+
+  ##################### 
+  ######################
+  ###################### */
+
+.categoryDiv ul {
+  position: sticky;
+  font-size: 1.3rem;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  border-bottom: 1px solid white;
+}
+
+.prevContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mindTopicPrev {
+  margin-top: 50px;
+  flex: 40%;
+  padding: 0px 5px;
+  border: 1px solid #f5429b;
+  transform: scale();
+  position: relative;
+}
+
+.mindTopicPrev:hover {
+  transform: scale(1.1);
+}
+
+.spaceColumn {
+  flex: 1%;
+}
+
+.topicDate {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-style: italic;
+  margin: 10px 10px;
+}
+
+/* ### ANIMATIONS #######################################################*/
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+@keyframes fillTag {
+  from {
+    fill: white;
+  }
+  to {
+    fill: rgb(245, 47, 162);
+  }
+}
+
+/* ### MEDIA QUERIES ########################################################*/
+
+@media screen and (max-width: 800px) {
+  .prevContainer {
+    flex-direction: column;
+  }
+}
