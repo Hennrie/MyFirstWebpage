@@ -9,10 +9,11 @@
 
 body {
   overflow-x: hidden;
+  background: #141e30;
   background-image: linear-gradient(to right, #141e30, #243b55);
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Allerta", sans-serif;
 }
 
@@ -26,7 +27,7 @@ h1 {
   font-family: "Allerta Stencil";
   font-size: 104px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 300;
 }
 
@@ -39,7 +40,9 @@ h2 {
 
 h3 {
   font-size: 2.25rem;
+  margin: 10px 0;
   margin-bottom: 20px;
+  color: black;
 }
 
 .mainHr {
@@ -55,6 +58,8 @@ h3 {
 p {
   font-size: 1.2rem;
   line-height: 1.4;
+  color: black;
+  font-weight: 400;
 }
 
 a {
@@ -260,25 +265,37 @@ button {
   margin-top: 50px;
   flex: 40%;
   padding: 0px 5px;
-  border: 1px solid #f5429b;
-  transform: scale();
+  background: whitesmoke;
+  outline: 1px solid #f5429b;
   position: relative;
+  transition: all 0.5s ease;
 }
 
 .mindTopicPrev:hover {
-  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #f5429b;
+  background: rgb(70, 81, 98);
 }
 
+.mindTopicPrev:hover::after {
+  content: "Read!";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
 .spaceColumn {
-  flex: 1%;
+  flex: 0.5%;
 }
 
 .topicDate {
+  font-weight: 550;
+  color: black;
   position: absolute;
   right: 0;
   top: 0;
   font-style: italic;
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 /* ### ANIMATIONS #######################################################*/
