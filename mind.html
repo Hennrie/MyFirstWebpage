@@ -1,174 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="myPageStyle.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>MyPage</title>
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="app.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a data-page="home" href="#">Home</a></li>
-          <li><a data-page="music" href="#">Music</a></li>
-          <li><a data-page="mind" href="#">Mind</a></li>
-          <li><a data-page="art" href="#">Art</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="myPageStyle.css" />
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet" />
 
-    <h1>Mind</h1>
+  <title>MyPage</title>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="app.js"></script>
+</head>
 
-    <div class="categoryDiv">
-      <ul class="list">
-        <li>Kategorie:</li>
-        <li>
-          <a data-page="lorem" href="#lorem" class="scrollTopicLink">Lorem</a>
-        </li>
-        <li>
-          <a data-page="etiam" href="#etiam" class="scrollTopicLink">Etiam</a>
-        </li>
-        <li><a data-page="aliquam" href="#aliquam">Aliquam</a></li>
-        <li><a data-page="vestibulum" href="#vestibulum">Vestibulum</a></li>
-      </ul>
-    </div>
-    <main>
-      <h2 id="lorem">Lorem</h2>
-      <hr class="headingHr" />
-      <div class="prevContainer">
-        <div class="mindTopicPrev">
-          <a href="#">
-            <div class="topicPrevHoverLabel">
-              <h3>Duis</h3>
-              <span class="topicDate">12| 4| 2019</span>
-              <p>
-                Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
-                eget maximus felis commodo. Proin pellentesque eget arcu ut
-                maximus. Nullam vitae purus convallis lacus maximus mollis
-                gravida sed leo. Curabitur dignissim, massa vehicula faucibus
-                tempus, velit ipsum consectetur tortor, ut interdum mauris nisl
-                at purus. Proin porttitor luctus risus, sed auctor purus
-                fermentum a. Sed imperdiet sed justo at auctor. Sed auctor est
-                sit amet dolor interdum congue. Quisque convallis condimentum
-                odio id lobortis.
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <div class="spaceColumn"></div>
-
-        <div class="mindTopicPrev">
-          <a href="#">
-            <h3>Fusce</h3>
-            <span class="topicDate">12| 4| 2019</span>
-            <p>
-              Fusce sed massa gravida, viverra ligula non, maximus felis.
-              Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
-              sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
-              tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
-              amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
-              laoreet turpis, vitae consequat quam. Sed fringilla convallis
-              mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
-              viverra odio quis varius. Suspendisse at pulvinar ipsum.
-            </p>
-          </a>
-        </div>
-
-        <div class="mindTopicPrev">
-          <a href="#">
-            <h3>Proin</h3>
-            <span class="topicDate">12| 4| 2019</span>
-            <p>
-              Proin a tempor justo, vel mattis nunc. Morbi in nibh non nibh
-              egestas facilisis et eget neque. Integer eu ultricies lectus.
-              Morbi non dui tempor, mollis sem et, sagittis velit. Mauris erat
-              tellus, porta id blandit at, pulvinar id neque. Sed at metus ut
-              enim consequat dapibus. Nunc pellentesque nisi nibh, ac aliquet
-              enim venenatis quis. In a cursus ligula. Vestibulum malesuada
-              lacus nec sem egestas porttitor. Nulla facilisi.
-            </p>
-          </a>
-        </div>
-
-        <div class="spaceColumn"></div>
-
-        <div class="mindTopicPrev">
-          <a href="#">
-            <h3>Suspendisse</h3>
-            <span class="topicDate">12| 4| 2019</span>
-            <p>
-              Suspendisse sed massa gravida, viverra ligula non, maximus felis.
-              Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
-              sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
-              tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
-              amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
-              laoreet turpis, vitae consequat quam. Sed fringilla convallis
-              mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
-              viverra odio quis varius. Suspendisse at pulvinar ipsum.
-            </p>
-          </a>
-        </div>
-      </div>
-      <h2 id="etiam">Etiam</h2>
-      <hr class="headingHr" />
-      <div class="prevContainer">
-        <div class="mindTopicPrev">
-          <a href="./home.html">
-            <div class="topicPrevHoverLabel">
-              <h3>Duis</h3>
-              <span class="topicDate">12| 4| 2019</span>
-              <p>
-                Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
-                eget maximus felis commodo. Proin pellentesque eget arcu ut
-                maximus. Nullam vitae purus convallis lacus maximus mollis
-                gravida sed leo. Curabitur dignissim, massa vehicula faucibus
-                tempus, velit ipsum consectetur tortor, ut interdum mauris nisl
-                at purus. Proin porttitor luctus risus, sed auctor purus
-                fermentum a. Sed imperdiet sed justo at auctor. Sed auctor est
-                sit amet dolor interdum congue. Quisque convallis condimentum
-                odio id lobortis.
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <div class="spaceColumn"></div>
-
-        <div class="mindTopicPrev">
-          <a href="#">
-            <h3>Fusce</h3>
-            <span class="topicDate">12| 4| 2019</span>
-            <p>
-              Fusce sed massa gravida, viverra ligula non, maximus felis.
-              Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
-              sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
-              tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
-              amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
-              laoreet turpis, vitae consequat quam. Sed fringilla convallis
-              mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
-              viverra odio quis varius. Suspendisse at pulvinar ipsum.
-            </p>
-          </a>
-        </div>
-      </div>
-    </main>
-    <footer>
+<body>
+  <header>
+    <nav>
       <ul>
-        <li>&copy; <span id="copyright">2020 Henning Kloß</span></li>
-        <li><a data-page="lorem" href="./home.html">About me</a></li>
-        <li><a data-page="etiam" href="#">Contact</a></li>
-        <li><a data-page="aliquam" href="#">Github</a></li>
-        <li><a data-page="vestibulum" href="#">Blabla</a></li>
+        <li><a data-page="home" href="#">Home</a></li>
+        <li><a data-page="music" href="#">Music</a></li>
+        <li><a data-page="mind" href="#">Mind</a></li>
+        <li><a data-page="art" href="#">Art</a></li>
       </ul>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <h1>Mind</h1>
+
+  <div class="categoryDiv">
+    <ul class="list">
+      <li>Kategorie:</li>
+      <li>
+        <a data-page="lorem" href="#lorem" class="scrollTopicLink">Lorem</a>
+      </li>
+      <li>
+        <a data-page="etiam" href="#etiam" class="scrollTopicLink">Etiam</a>
+      </li>
+      <li><a data-page="aliquam" href="#aliquam">Aliquam</a></li>
+      <li><a data-page="vestibulum" href="#vestibulum">Vestibulum</a></li>
+    </ul>
+  </div>
+  <main>
+    <h2 id="lorem">Lorem</h2>
+    <hr class="headingHr" />
+    <div class="prevContainer">
+      <div id="topicLorem_1" class="mindTopicPrev">
+        <div class="topicPrevHoverLabel">
+          <h3>Duis</h3>
+          <span class="topicDate">12| 4| 2019</span>
+          <p>
+            Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
+            eget maximus felis commodo. Proin pellentesque eget arcu ut
+            maximus. Nullam vitae purus convallis lacus maximus mollis gravida
+            sed leo. Curabitur dignissim, massa vehicula faucibus tempus,
+            velit ipsum consectetur tortor, ut interdum mauris nisl at purus.
+            Proin porttitor luctus risus, sed auctor purus fermentum a. Sed
+            imperdiet sed justo at auctor. Sed auctor est sit amet dolor
+            interdum congue. Quisque convallis condimentum odio id
+            lobortis.
+            <br>
+            <br>
+            Fusce sed massa gravida, viverra ligula non, maximus felis.
+            Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
+            sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
+            tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
+            amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
+            laoreet turpis, vitae consequat quam. Sed fringilla convallis
+            mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
+            viverra odio quis varius. Suspendisse at pulvinar ipsum.
+            <br>
+            <br>
+            Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
+            eget maximus felis commodo. Proin pellentesque eget arcu ut
+            maximus. Nullam vitae purus convallis lacus maximus mollis gravida
+            sed leo. Curabitur dignissim, massa vehicula faucibus tempus,
+            velit ipsum consectetur tortor, ut interdum mauris nisl at purus.
+            Proin porttitor luctus risus, sed auctor purus fermentum a. Sed
+            imperdiet sed justo at auctor. Sed auctor est sit amet dolor
+            interdum congue. Quisque convallis condimentum odio id
+            lobortis.
+          </p>
+        </div>
+      </div>
+      <div id="topicLorem_2" class="mindTopicPrev">
+
+        <h3>Fusce</h3>
+        <span class="topicDate">12| 4| 2019</span>
+        <p>
+          Fusce sed massa gravida, viverra ligula non, maximus felis.
+          Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
+          sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
+          tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
+          amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
+          laoreet turpis, vitae consequat quam. Sed fringilla convallis
+          mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
+          viverra odio quis varius. Suspendisse at pulvinar ipsum.
+        </p>
+
+      </div>
+
+      <div id="topicLorem_3" class="mindTopicPrev">
+
+        <h3>Proin</h3>
+        <span class="topicDate">12| 4| 2019</span>
+        <p>
+          Proin a tempor justo, vel mattis nunc. Morbi in nibh non nibh
+          egestas facilisis et eget neque. Integer eu ultricies lectus.
+          Morbi non dui tempor, mollis sem et, sagittis velit. Mauris erat
+          tellus, porta id blandit at, pulvinar id neque. Sed at metus ut
+          enim consequat dapibus. Nunc pellentesque nisi nibh, ac aliquet
+          enim venenatis quis. In a cursus ligula. Vestibulum malesuada
+          lacus nec sem egestas porttitor. Nulla facilisi.
+        </p>
+
+      </div>
+
+      <div id="topicLorem_4" class="mindTopicPrev">
+
+        <h3>Suspendisse</h3>
+        <span class="topicDate">12| 4| 2019</span>
+        <p>
+          Suspendisse sed massa gravida, viverra ligula non, maximus felis.
+          Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
+          sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
+          tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
+          amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
+          laoreet turpis, vitae consequat quam. Sed fringilla convallis
+          mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
+          viverra odio quis varius. Suspendisse at pulvinar ipsum.
+        </p>
+
+      </div>
+    </div>
+    <h2 id="etiam">Etiam</h2>
+    <hr class="headingHr" />
+    <div class="prevContainer">
+      <div class="mindTopicPrev">
+
+        <div class="topicPrevHoverLabel">
+          <h3>Duis</h3>
+          <span class="topicDate">12| 4| 2019</span>
+          <p>
+            Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
+            eget maximus felis commodo. Proin pellentesque eget arcu ut
+            maximus. Nullam vitae purus convallis lacus maximus mollis
+            gravida sed leo. Curabitur dignissim, massa vehicula faucibus
+            tempus, velit ipsum consectetur tortor, ut interdum mauris nisl
+            at purus. Proin porttitor luctus risus, sed auctor purus
+            fermentum a. Sed imperdiet sed justo at auctor. Sed auctor est
+            sit amet dolor interdum congue. Quisque convallis condimentum
+            odio id lobortis.
+          </p>
+        </div>
+        </a>
+      </div>
+
+      <div class="mindTopicPrev">
+
+        <h3>Fusce</h3>
+        <span class="topicDate">12| 4| 2019</span>
+        <p>
+          Fusce sed massa gravida, viverra ligula non, maximus felis.
+          Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
+          sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
+          tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
+          amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
+          laoreet turpis, vitae consequat quam. Sed fringilla convallis
+          mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
+          viverra odio quis varius. Suspendisse at pulvinar ipsum.
+        </p>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li>&copy; <span id="copyright">2020 Henning Kloß</span></li>
+      <li><a data-page="lorem" href="./home.html">About me</a></li>
+      <li><a data-page="etiam" href="#">Contact</a></li>
+      <li><a data-page="aliquam" href="#">Github</a></li>
+      <li><a data-page="vestibulum" href="#">Blabla</a></li>
+    </ul>
+  </footer>
+</body>
+
 </html>

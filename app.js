@@ -4,8 +4,8 @@ for (let i = 0; i < text.length; i++) {
   console.log(`Letter ${i} is ${text[i].getTotalLength()}`);
 }
 
-$(document).ready(function() {
-  $("a.scrollTopicLink").click(function(event) {
+$(document).ready(function () {
+  $("a.scrollTopicLink").click(function (event) {
     event.preventDefault();
     $("html, body").animate(
       { scrollTop: $($(this).attr("href")).offset().top - 100 },
@@ -14,26 +14,32 @@ $(document).ready(function() {
   });
 });
 
-/* $(".scrollTopicLink").on("click", function(e) {
-  e.preventDefault();
-  var offset = 500;
-  var target = this.hash;
-  if ($(this).data("offset") != undefined) offset = $(this).data("offset");
-  $("html, body")
-    .stop()
-    .animate(
-      {
-        scrollTop: $(target).offset().top - offset
-      },
-      500,
-      "swing",
-      function() {
-        // window.location.hash = target;
-      }
-    );
-}); */
+$(document).ready(function () {
+  $(".mindTopicPrev").hover(function () {
+    $(this).toggleClass("hover");
 
-/* 
+  });
+});
+
+$(document).ready(function () {
+  $("button").click(function () {
+    $(this).remove();
+    $(".tag").css({ "visibility": "visible", "pointer-events": "auto" });
+    $("svg").addClass("animationText");
+
+  });
+});
+
+
+$(document).ready(function () {
+  $(".mindTopicPrev").click(function () {
+    $(this).toggleClass("read");
+    $(this).toggleClass("hover");
+
+  });
+});
+
+/*
 var elem = document.getElementById("musicLink");
 var tag = document.getElementById("musicTag");
 elem.addEventListener("mouseover", mouseOver);

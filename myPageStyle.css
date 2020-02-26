@@ -51,7 +51,7 @@ h3 {
 }
 
 .headingHr {
-  width: 46.5%;
+  width: 48%;
 }
 
 p {
@@ -70,14 +70,14 @@ ul {
 }
 
 footer {
-  margin-top: 60px;
+  margin: 50px 0px;
 }
 
 footer ul {
   font-size: 0.9rem;
   margin: auto;
 
-  padding: 20px 0px;
+  padding: 30px 0px;
   display: flex;
   justify-content: space-between;
   width: 85%;
@@ -124,12 +124,13 @@ nav ul {
   ######################
   ###################### */
 
+
+
 .animationText {
   animation: fill 1s ease forwards 4s;
 }
 
 button {
-  visibility: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -237,7 +238,14 @@ button {
   opacity: 1;
 }
 
+.tag {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .svgDiv {
+  display: none;
+  pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -283,33 +291,79 @@ button {
 .prevContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .mindTopicPrev {
+  height: 28vh;
+  
   margin-top: 50px;
-  flex: 40%;
-  padding: 0px 5px;
+  
+  flex-basis: 48%;
+  padding: 20px;
+  background: whitesmoke;
+  outline: 1px solid #f5429b;
+
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.mindTopicPrev.read {
+  flex-basis: 100%;
+  
+  height: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  margin-top: 50px;
   background: whitesmoke;
   outline: 1px solid #f5429b;
   position: relative;
-  transition: all 0.5s ease;
+  padding: 40px;
+  background-color: whitesmoke;
 }
 
-.mindTopicPrev:hover {
+.hover {
   cursor: pointer;
   box-shadow: 0px 0px 0px 7px #f5429b;
   background: rgb(70, 81, 98);
 }
 
-.mindTopicPrev:hover::after {
+.hover::after {
   content: "Read!";
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
   right: 50%;
+  transform: translate(50%, 0%);
 }
-.spaceColumn {
-  flex: 0.5%;
+/* .mindTopicPrev:hover::after {
+  content: "Read!";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 0%);
+} */
+
+/* .mindTopicReadBlock {
+   display: block;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-basis: 100%;
+  max-height: 100%;
+  
+  margin-top: 50px;
+  background: whitesmoke;
+  outline: 1px solid #f5429b;
+  position: relative;
+  padding: 40px;
+  background-color: whitesmoke; */
+  
 }
 
 .topicDate {
@@ -350,8 +404,9 @@ button {
 
 /* ### MEDIA QUERIES ########################################################*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .prevContainer {
     flex-direction: column;
   }
+
 }
