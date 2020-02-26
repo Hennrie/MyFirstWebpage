@@ -1,2 +1,2 @@
-# MyFirstWebpage
-My first try to design and develop a webpage with basic HTML, CSS and JS
+# MyFirstWebPage
+My first try to design and develop a web page with basic HTML, CSS and JS
