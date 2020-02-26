@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap"
       rel="stylesheet"
     />
+
     <title>MyPage</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <header>
@@ -23,23 +26,26 @@
     </header>
 
     <h1>Mind</h1>
-    <hr class="mainHr" />
 
     <div class="categoryDiv">
       <ul class="list">
         <li>Kategorie:</li>
-        <li><a data-page="lorem" href="./home.html">Lorem</a></li>
-        <li><a data-page="etiam" href="#">Etiam</a></li>
-        <li><a data-page="aliquam" href="#">Aliquam</a></li>
-        <li><a data-page="vestibulum" href="#">Vestibulum</a></li>
+        <li>
+          <a data-page="lorem" href="#lorem" class="scrollTopicLink">Lorem</a>
+        </li>
+        <li>
+          <a data-page="etiam" href="#etiam" class="scrollTopicLink">Etiam</a>
+        </li>
+        <li><a data-page="aliquam" href="#aliquam">Aliquam</a></li>
+        <li><a data-page="vestibulum" href="#vestibulum">Vestibulum</a></li>
       </ul>
     </div>
     <main>
-      <h2>Lorem</h2>
+      <h2 id="lorem">Lorem</h2>
       <hr class="headingHr" />
       <div class="prevContainer">
         <div class="mindTopicPrev">
-          <a href="./home.html">
+          <a href="#">
             <div class="topicPrevHoverLabel">
               <h3>Duis</h3>
               <span class="topicDate">12| 4| 2019</span>
@@ -112,7 +118,57 @@
           </a>
         </div>
       </div>
+      <h2 id="etiam">Etiam</h2>
+      <hr class="headingHr" />
+      <div class="prevContainer">
+        <div class="mindTopicPrev">
+          <a href="./home.html">
+            <div class="topicPrevHoverLabel">
+              <h3>Duis</h3>
+              <span class="topicDate">12| 4| 2019</span>
+              <p>
+                Duis vitae diam orci. Etiam vestibulum eros ut nunc vestibulum,
+                eget maximus felis commodo. Proin pellentesque eget arcu ut
+                maximus. Nullam vitae purus convallis lacus maximus mollis
+                gravida sed leo. Curabitur dignissim, massa vehicula faucibus
+                tempus, velit ipsum consectetur tortor, ut interdum mauris nisl
+                at purus. Proin porttitor luctus risus, sed auctor purus
+                fermentum a. Sed imperdiet sed justo at auctor. Sed auctor est
+                sit amet dolor interdum congue. Quisque convallis condimentum
+                odio id lobortis.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="spaceColumn"></div>
+
+        <div class="mindTopicPrev">
+          <a href="#">
+            <h3>Fusce</h3>
+            <span class="topicDate">12| 4| 2019</span>
+            <p>
+              Fusce sed massa gravida, viverra ligula non, maximus felis.
+              Aliquam fermentum nunc nec dui faucibus molestie et in libero. Sed
+              sed metus vel justo auctor scelerisque. Aliquam gravida rutrum
+              tincidunt. Morbi at eleifend tortor. Maecenas rutrum velit sit
+              amet elit mollis tristique. Suspendisse a enim orci. Mauris sed
+              laoreet turpis, vitae consequat quam. Sed fringilla convallis
+              mollis. Sed vehicula eget orci vitae imperdiet. Aenean laoreet
+              viverra odio quis varius. Suspendisse at pulvinar ipsum.
+            </p>
+          </a>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <ul>
+        <li>&copy; <span id="copyright">2020 Henning Kloß</span></li>
+        <li><a data-page="lorem" href="./home.html">About me</a></li>
+        <li><a data-page="etiam" href="#">Contact</a></li>
+        <li><a data-page="aliquam" href="#">Github</a></li>
+        <li><a data-page="vestibulum" href="#">Blabla</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
