@@ -4,59 +4,77 @@ for (let i = 0; i < text.length; i++) {
   console.log(`Letter ${i} is ${text[i].getTotalLength()}`);
 }
 
-$(document).ready(function () {
-  $("a.scrollTopicLink").click(function (event) {
+$(document).ready(function() {
+  $("a.scrollTopicLink").click(function(event) {
     event.preventDefault();
     $("html, body").animate(
       { scrollTop: $($(this).attr("href")).offset().top - 100 },
       "slow"
     );
   });
+
+  /* $(".tag").click(function() {
+    $(this).animate({
+      position:
+    }
+
+    )
+  }); */
 });
 
-$(document).ready(function () {
-  $(".mindTopicPrev").hover(function () {
+$(document).ready(function() {
+  $(".mindTopicPrev").hover(function() {
     $(this).toggleClass("hover");
-
   });
 });
 
-$(document).ready(function () {
-  $("button").click(function () {
-    $(this).remove();
-    $(".tag").css({ "visibility": "visible", "pointer-events": "auto" });
-    $("svg").addClass("animationText");
+/* function whichTransitionEvent() {
+  var t;
+  var el = document.createElement('fakeelement');
+  var transitions = {
+    "animation": "animationend",
+    "OAnimation": "oAnimationEnd",
+    "MozAnimation": "animationend",
+    "WebkitAnimation": "webkitAnimationEnd"
+  }
 
-  });
-});
-
-
-$(document).ready(function () {
-  $(".mindTopicPrev").click(function () {
-    $(this).toggleClass("read");
-    $(this).toggleClass("hover");
-
-  });
-});
-
-/*
-var elem = document.getElementById("musicLink");
-var tag = document.getElementById("musicTag");
-elem.addEventListener("mouseover", mouseOver);
-elem.addEventListener("mouseout", mouseOut);
-
-function mouseOver() {
-  tag.classList.add("hover");
+  for (t in transitions) {
+    if (el.style[t] !== undefined) {
+      return transitions[t];
+    }
+  }
 }
 
-function mouseOut() {
-  tag.classList.remove("hover");
-} */
-// $("musicLink").hover(
-//   function() {
-//     $("musicTag").addClass("hover");
-//   },
-//   function() {
-//     $("musicTag").removeClass("hover");
-//   }
-// );
+var transitionEnd = whichTransitionEvent();
+ */
+$(document).ready(function() {
+  $("button").click(function() {
+    $(this).remove();
+    $(".tag").css("visibility", "visible");
+    $("svg").addClass("animationText");
+
+    setTimeout(function() {
+      $(".tag").css("pointer-events", "auto");
+    }, 4000);
+
+    /* text.forEach(t => {
+      t.addEventListener("animationed", console.log("end")); */
+  });
+});
+
+var prevClicked = 0;
+let i = 0;
+
+$(document).ready(function textPrevClick() {
+  $(".mindTopicPrev").click(function(event) {
+    let id = event.target.id;
+    if (i > 0) {
+      console.log("jo");
+      document.getElementById(prevClicked).classList.toggle("read");
+    }
+    i = 1;
+    $(this).toggleClass("read");
+    $(this).css("pointer-events", "none");
+    prevClicked = id;
+  });
+});

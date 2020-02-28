@@ -1,5 +1,9 @@
 /* ### GENERAL STYLING ###################################################### */
 
+html {
+  height: 100%;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -8,10 +12,7 @@
 }
 
 body {
-  overflow-x: hidden;
-  background: #141e30;
-  background-image: linear-gradient(to right, #141e30, #243b55);
-
+  background: linear-gradient(to right, #141e30, #243b55);
   /* width: 100%;
   height: 100%; */
   font-family: "Allerta", sans-serif;
@@ -24,7 +25,7 @@ main {
 
 h1 {
   font-family: "Allerta Stencil";
-  font-size: 104px;
+  font-size: 6.5rem;
   text-align: center;
   margin-top: 40px;
   font-weight: 300;
@@ -124,19 +125,18 @@ nav ul {
   ######################
   ###################### */
 
-
-
 .animationText {
   animation: fill 1s ease forwards 4s;
 }
 
 button {
   position: absolute;
+  padding: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 180px;
-  min-height: 60px;
+  min-width: 20%;
+  height: 60px;
   font-family: sans-serif;
   font-size: 1.3rem;
   text-align: center;
@@ -146,7 +146,20 @@ button {
   background: none;
   color: white;
   font-weight: 300;
-  transition: 0.5s;
+  transition: all 0.7s ease;
+}
+
+button:hover {
+  background: #f5429b;
+  color: black;
+  font-size: 1.4rem;
+}
+
+button:hover span {
+  display: none;
+}
+button:hover:before {
+  content: "Are you sure?";
 }
 
 .animationText path:nth-child(n) {
@@ -161,7 +174,33 @@ button {
   transform: translateX(-105px);
 }
 
-.musicTag::after {
+.musicLink::after {
+  content: "/";
+  color: #f5429b;
+  font-weight: 600;
+  font-size: 6.5rem;
+  position: absolute;
+  right: -20%;
+  bottom: 11%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.musicLink::before {
+  content: "/";
+  color: #f5429b;
+  font-weight: 600;
+  font-size: 6.5rem;
+  position: absolute;
+  left: -20%;
+  bottom: 11%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+
+  /* ### old hover-line
+  
   content: "";
   position: absolute;
   bottom: 30px;
@@ -176,19 +215,36 @@ button {
     rgba(27, 43, 64, 1) 0%,
     rgba(99, 51, 94, 1) 49%,
     rgba(245, 66, 155, 1) 100%
-  );
+  ); */
 }
 
-.musicTag:hover::after {
-  height: 35px;
+.musicLink:hover::after {
   opacity: 1;
+  right: -4%;
+}
+
+.musicLink:hover::before {
+  opacity: 1;
+  left: -4%;
 }
 
 .mindTag {
   transform: translateX(128px);
 }
 
-.mindTag::after {
+.mindLink::after {
+  content: "/";
+  color: #f5429b;
+  font-weight: 600;
+  font-size: 6.5rem;
+  position: absolute;
+  right: -22%;
+  bottom: 12%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+
+  /* ### old hover-line 
   content: "";
   position: absolute;
   bottom: 30px;
@@ -203,19 +259,62 @@ button {
     rgba(27, 43, 64, 1) 0%,
     rgba(99, 51, 94, 1) 49%,
     rgba(245, 66, 155, 1) 100%
-  );
+  ); */
 }
 
-.mindTag:hover::after {
-  height: 35px;
+.mindLink::before {
+  content: "/";
+  color: #f5429b;
+  font-weight: 600;
+  font-size: 6.5rem;
+  position: absolute;
+  left: -22%;
+  bottom: 12%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.mindLink:hover::after {
   opacity: 1;
+  right: -6%;
+}
+
+.mindLink:hover::before {
+  opacity: 1;
+  left: -6%;
 }
 
 .artTag {
   transform: translateX(-43px);
 }
 
-.artTag::after {
+.artLink::after {
+  content: "/";
+  color: #f5429b;
+  font-size: 6.5rem;
+  font-weight: 600;
+  position: absolute;
+  right: -22%;
+  bottom: 12%;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.artLink::before {
+  content: "/";
+  color: #f5429b;
+  font-size: 6.5rem;
+  font-weight: 600;
+  position: absolute;
+  left: -19%;
+  bottom: 12%;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+
+  /* ### old hover line
   content: "";
   position: absolute;
   bottom: 30px;
@@ -229,12 +328,17 @@ button {
     180deg,
     rgba(27, 43, 64, 1) 0%,
     rgba(99, 51, 94, 1) 49%,
-    rgba(245, 66, 155, 1) 100%
-  );
+    );
+    rgba(245, 66, 155, 1) 100% */
 }
 
-.artTag:hover::after {
-  height: 35px;
+.artLink:hover::after {
+  right: -7%;
+  opacity: 1;
+}
+
+.artLink:hover::before {
+  left: -3%;
   opacity: 1;
 }
 
@@ -269,23 +373,38 @@ button {
   ##################### 
   ######################
   ###################### */
-.categoryDiv {
+.navCategoryContainer {
+  display: flex;
+  align-content: space-around;
   position: sticky;
+  width: 85%;
+  margin: auto;
+  padding: 20px 0px;
   top: 0px;
   z-index: 1;
   background-image: linear-gradient(to right, #141e30, #243b55);
-}
-
-.categoryDiv ul {
-  font-size: 1.3rem;
-  margin: auto;
-  margin-top: 20px;
-  padding: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
   border-top: 2px solid #f5429b;
   border-bottom: 2px solid white;
+}
+
+.categoriesContainer {
+  flex: 2;
+}
+
+.navContainer {
+  flex: 1;
+}
+
+.categoriesContainer ul {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navContainer ul {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .prevContainer {
@@ -296,9 +415,9 @@ button {
 
 .mindTopicPrev {
   height: 28vh;
-  
+
   margin-top: 50px;
-  
+
   flex-basis: 48%;
   padding: 20px;
   background: whitesmoke;
@@ -309,9 +428,23 @@ button {
   position: relative;
 }
 
+.mindTopicPrev:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #f5429b;
+  background: rgb(70, 81, 98);
+}
+
+.mindTopicPrev:hover::after {
+  content: "Read!";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+
 .mindTopicPrev.read {
   flex-basis: 100%;
-  
   height: 100%;
   height: 100%;
   transition: all 1s ease-in-out;
@@ -323,7 +456,7 @@ button {
   background-color: whitesmoke;
 }
 
-.hover {
+/* .hover {
   cursor: pointer;
   box-shadow: 0px 0px 0px 7px #f5429b;
   background: rgb(70, 81, 98);
@@ -336,7 +469,7 @@ button {
   top: 50%;
   right: 50%;
   transform: translate(50%, 0%);
-}
+} */
 /* .mindTopicPrev:hover::after {
   content: "Read!";
   font-size: 1.5rem;
@@ -363,8 +496,6 @@ button {
   position: relative;
   padding: 40px;
   background-color: whitesmoke; */
-  
-}
 
 .topicDate {
   font-weight: 550;
@@ -384,7 +515,7 @@ button {
   }
 }
 
-@keyframes fill {
+@-webkit-keyframes fill {
   from {
     fill: transparent;
   }
@@ -408,5 +539,4 @@ button {
   .prevContainer {
     flex-direction: column;
   }
-
 }
