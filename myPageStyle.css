@@ -454,6 +454,7 @@ button:hover:before {
   position: relative;
   padding: 40px;
   background-color: whitesmoke;
+  pointer-events: none;
 }
 
 /* .hover {

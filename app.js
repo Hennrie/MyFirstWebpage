@@ -62,19 +62,15 @@ $(document).ready(function() {
   });
 });
 
-var prevClicked = 0;
-let i = 0;
+var prevClicked;
 
 $(document).ready(function textPrevClick() {
-  $(".mindTopicPrev").click(function(event) {
-    let id = event.target.id;
-    if (i > 0) {
-      console.log("jo");
-      document.getElementById(prevClicked).classList.toggle("read");
+  $(".mindTopicPrev").click(function() {
+    if (prevClicked != null) {
+      $(prevClicked).toggleClass("read");
     }
-    i = 1;
+
     $(this).toggleClass("read");
-    $(this).css("pointer-events", "none");
-    prevClicked = id;
+    prevClicked = this;
   });
 });
